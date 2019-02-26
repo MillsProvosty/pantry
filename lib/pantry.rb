@@ -5,10 +5,18 @@ class Pantry
   end
 
   def stock_check(food)
-    if @stock.include?(food)
-      return food.value
-    else
-      return 0
-    end 
+      @stock.sum do |item, quantity|
+        if item == food
+          quantity
+        end
+      end
   end
+
+  def restock(food, quantity)
+    @stock[food] += quantity
+  end
+
+
+
+
 end
