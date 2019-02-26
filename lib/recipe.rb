@@ -24,5 +24,15 @@ class Recipe
     end
   end
 
+  def total_calories
+    total = 0
+    @ingredients_required.each do |object, quantity|
+      object.calories * quantity += total
+      binding.pry
+      total
+    end
+
+  end
+
 
 end
