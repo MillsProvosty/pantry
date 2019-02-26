@@ -18,10 +18,12 @@ class Pantry
 
 #honstly, I have no idea how to do this without hard coding this in there...
   def enough_ingredients_for?(recipe)
-    if @stock.include? @cheese && @mac
-      true
-    else
-      false
+    recipe.map do |ingredients|
+      if @stock.include? ingredients
+        true
+      else
+        false
+      end
     end
   end
 
