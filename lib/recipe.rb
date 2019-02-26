@@ -16,7 +16,12 @@ class Recipe
         return quantity
       end
     end
+  end
 
+  def ingredients
+    @ingredients_required.map do |object, quantity|
+      object
+    end
   end
 
 
