@@ -7,12 +7,8 @@ class Recipe
   end
 
   def add_ingredient(ingredient, quantity)
-    ingredient.each do |ingredient|
-      key = ingredient.name
-      key
-    end
-
-    new_ingredient = Hash[key.zip(quantity)]
+    new_ingredient = Hash.new
+    new_ingredient[ingredient] = quantity
     @ingredients_required << new_ingredient
   end
 end
