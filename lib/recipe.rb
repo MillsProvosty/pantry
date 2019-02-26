@@ -7,8 +7,6 @@ class Recipe
   end
 
   def add_ingredient(ingredient, quantity)
-    new_ingredient = Hash.new
-    new_ingredient[ingredient] = quantity
-    @ingredients_required << new_ingredient
+  @ingredients_required[ingredient] = quantity
   end
 end
